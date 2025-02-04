@@ -8,34 +8,41 @@ body {
     height: 100vh;
 }
 
-.product-container {
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
+
+
+/* Ensure the image container has a relative positioning context */
+.product-image {
+    position: relative;
+    overflow: hidden; /* Prevent image from overflowing */
+    width: 100%; /* Or specify a fixed size */
+    height: 500px; /* Adjust to the size of your image container */
+   
 }
 
-.product-image img {
+/* Make sure the image itself is responsive */
+#product-img {
     width: 100%;
-    max-width: 400px;
     height: auto;
-    transition: 0.3s ease;
+    transition: transform 0.1s ease-out; /* Smooth scaling transition */
+    transform-origin: center center; /* Default origin */
 }
 
+/* Optional styles for swatches */
 .swatches {
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .swatch {
     width: 150px;
     height: 150px;
-    border-radius: 10%;
+    border-radius: 5%;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #fff;
 }
-
 
 .swatch:hover {
     transform: scale(1.1);
